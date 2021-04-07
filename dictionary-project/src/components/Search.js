@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import Results from "./Results";
 
 export default function Search () {
     let [word, setWord] = useState(null);
+    let [result, setResult] = useState(null)
 
     // Gathers data form the api
     function handleResponse(response) {
-        console.log(response.data[0]); // Recieving first definition only
+        //console.log(response.data[0].meanings[0].definitions[0].definition);
+        setResult(response.data[0]);
     }
 
     // Triggers the search
@@ -24,11 +27,12 @@ export default function Search () {
     }
 
     return (
-        <div className="search-container">
+        <section className="search-container">
             <form onSubmit={search}>
                 <input type="search" placeholder="Search for a word..." autoFocus={true} onChange={handleWordChange}/>
                 <input type="submit" value="search"/>
             </form>
-        </div>
+            <Results result={result}/>
+        </section>
     )
 }
