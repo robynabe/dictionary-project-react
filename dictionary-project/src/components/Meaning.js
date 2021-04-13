@@ -1,7 +1,6 @@
 import Synonyms from './Synonyms';
 
 export default function Meaning(props) {
-    console.log(props.meanings);
 
     return (
         <section className="meanings-container">
@@ -13,7 +12,7 @@ export default function Meaning(props) {
                         <p>{definition.definition}</p>
                         <p><em>{definition.example}</em></p>
 
-                        <Synonyms synonyms={definition.synonyms}/>
+                        <Synonyms synoyms={definition.synonyms}/>
                     </div>
                 )
             })}

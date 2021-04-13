@@ -1,7 +1,6 @@
 export default function Images(props) {
     
     if(props.images) {
-        console.log(props.images);
         return (
             <section className="image-container">
                 {props.images.map(function(image, i) {
@@ -16,8 +15,6 @@ export default function Images(props) {
             </section>
         );
     } else {
-        return (
-            <p>Searching for the perfect photos...</p>
-        )
+        return null;
     }
 }

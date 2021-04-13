@@ -21,7 +21,6 @@ export default function Search () {
     // Triggers the search
     function search(event) {
         event.preventDefault();
-        console.log(`Searching for ${word} definition...`); 
 
         // Dictionary API call
         axios.get(`${apiUrl}${word}`).then(handleDResponse);

@@ -32,7 +32,7 @@ export default function Results(props) {
         </div>
         );
     } else {
-        return "No results found...";
+        return null;
     }
 
 }
