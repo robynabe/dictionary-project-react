@@ -17,7 +17,7 @@ export default function Images(props) {
         );
     } else {
         return (
-            <p>Searching for the perfect pics...</p>
+            <p>Searching for the perfect photos...</p>
         )
     }
 }

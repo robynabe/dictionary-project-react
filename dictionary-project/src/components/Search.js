@@ -24,12 +24,9 @@ export default function Search () {
         console.log(`Searching for ${word} definition...`); 
 
         // Dictionary API call
-        //let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${word}`;
         axios.get(`${apiUrl}${word}`).then(handleDResponse);
 
         // Pexel API call
-        //const pApiKey = "563492ad6f91700001000001dd9e8da5ec0547129b98a6f9e32bcf54";
-        //let pApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=4`;
         let headers = { Authorization : `Bearer ${pApiKey}`};
         axios.get(`${pApiUrl}${word}&per_page=4`, { headers : headers }).then(handlePResponse);
     }
