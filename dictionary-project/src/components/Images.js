@@ -5,7 +5,7 @@ export default function Images(props) {
             <section className="image-container">
                 {props.images.map(function(image, i) {
                     return (
-                        <div key={i}>
+                        <div className="images" key={i}>
                             <a href={image.src.original} target="_blank" rel="noreferrer">
                                 <img src={image.src.tiny} alt={props.word}/>
                             </a>

@@ -1,10 +1,9 @@
-import './App.css';
 import Search from './components/Search';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="wrapper">
+      <header className="header">
         <h1>React Dictionary</h1>
       </header>
       <main>
