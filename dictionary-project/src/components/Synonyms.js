@@ -1,7 +1,9 @@
 export default function Synonyms(props) {
     if (props.synonyms) {
         return (
-            <ul className="synonyms-list">
+            <section className="synonyms-container">
+                <h4>Similar Words:</h4>
+                <ul className="synonyms-list">
 
                  {props.synonyms.map(function(synonym, i) {
                     return (
@@ -10,6 +12,7 @@ export default function Synonyms(props) {
                 })}
 
             </ul>
+            </section>
         )
     } else {
         return null;
