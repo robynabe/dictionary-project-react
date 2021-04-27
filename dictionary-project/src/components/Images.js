@@ -1,7 +1,4 @@
 export default function Images(props) {
-    function showMore() {
-        alert("Show more images here");
-    }
     
     if(props.images) {
         return (
@@ -15,7 +12,6 @@ export default function Images(props) {
                         </div>
                     )
                 })}
-                <button onClick={showMore}>See more</button>
             </section>
         );
     } else {
